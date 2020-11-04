@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="1086.0" prefWidth="1937.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.SupplierOrderFormController">
+   <children>
+      <ImageView fitHeight="1098.0" fitWidth="1937.0" opacity="0.51" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/light-pastel-color-vector-low-poly-crystal-background-png_66048.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="logoPane" layoutX="661.0" layoutY="230.0" prefHeight="727.0" prefWidth="969.0">
+         <children>
+            <Circle fill="#ffffff00" layoutX="441.0" layoutY="334.0" radius="280.0" stroke="#cfcfcf4f" strokeLineCap="ROUND" strokeWidth="20.0" />
+            <ImageView fitHeight="746.0" fitWidth="702.0" layoutX="119.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pngtree-rooster-logo-vector-design-icon-png-image_1928180.jpg" />
+               </image>
+            </ImageView>
+            <Label cache="true" layoutX="286.0" layoutY="331.0" prefHeight="80.0" prefWidth="340.0" text="Abaya Farm" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Algerian" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane id="menuBar" fx:id="menuBar" layoutX="-6.0" layoutY="144.0" prefHeight="954.0" prefWidth="400.0" style="-fx-background-color: #470952;" styleClass="menuBar" stylesheets="@style/Login.css">
+         <children>
+            <JFXButton fx:id="btnChick" buttonType="RAISED" focusTraversable="false" layoutX="4.0" layoutY="160.0" onAction="#btnChickOnAction" prefHeight="100.0" prefWidth="394.0" style="-fx-background-color: #6D214F;" text="  Chicks" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/chik.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnFeed" buttonType="RAISED" focusTraversable="false" layoutX="4.0" layoutY="290.0" onAction="#btnFeedOnAction" prefHeight="100.0" prefWidth="394.0" style="-fx-background-color: #6D214F;" text="   Feed" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/bag.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnMedicine" buttonType="RAISED" focusTraversable="false" layoutX="6.0" layoutY="419.0" onAction="#btnMedicineOnAction" prefHeight="100.0" prefWidth="394.0" style="-fx-background-color: #6D214F;" text="  Medicine" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icons8-pill-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnEquipment" buttonType="RAISED" focusTraversable="false" layoutX="6.0" layoutY="548.0" onAction="#btnEquipmentOnAction" prefHeight="100.0" prefWidth="394.0" style="-fx-background-color: #6D214F;" text="  Equipment" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/Maintenance_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Group layoutX="70.0" layoutY="688.0">
+               <children>
+                  <JFXButton fx:id="btnAddSupplier" alignment="TOP_CENTER" buttonType="RAISED" layoutY="-15.0" onAction="#btnAddSupplierOnAction" prefHeight="230.0" prefWidth="241.0" style="-fx-background-radius: 500; -fx-background-color: #6D214F;" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="30.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="94.0" fitWidth="87.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asserts/suppad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#b600c3" />
+                              <Stop color="#48f6ff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label alignment="BASELINE_CENTER" layoutX="20.0" layoutY="117.0" prefHeight="43.0" prefWidth="191.0" text=" Supplier" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <Label layoutX="247.0" layoutY="125.0" prefHeight="21.0" prefWidth="1684.0" style="-fx-background-color: #6D214F;" text=" " />
+      <Label layoutX="673.0" layoutY="37.0" prefHeight="81.0" prefWidth="784.0" text="Supplier Order Management" textFill="#460246">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="63.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="81.0" layoutX="1501.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-truck-100.png" />
+         </image>
+      </ImageView>
+      <Circle fill="WHITE" layoutX="123.0" layoutY="130.0" radius="111.0" stroke="#6b214f00" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fill="#4ac0ff57" layoutX="123.0" layoutY="131.0" radius="127.0" stroke="#6d214f" strokeType="INSIDE" strokeWidth="20.0" />
+      <ImageView fx:id="imgAdmin" fitHeight="190.0" fitWidth="206.0" layoutX="26.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-businessman-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="133.0" layoutY="4.0" prefHeight="21.0" prefWidth="1802.0" style="-fx-background-color: #6D214F;" text=" " />
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="1808.0" layoutY="29.0" onAction="#btnHomeOnAction" prefHeight="80.0" prefWidth="103.0" text=" ">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00b5c9" />
+                  <Stop color="#9136ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <graphic>
+            <ImageView fitHeight="73.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Dog%20House_96px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="root" layoutX="394.0" layoutY="149.0" prefHeight="948.0" prefWidth="1542.0" />
+   </children>
+</AnchorPane>

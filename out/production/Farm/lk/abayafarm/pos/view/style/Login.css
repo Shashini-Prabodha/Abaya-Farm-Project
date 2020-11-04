@@ -1,0 +1,98 @@
+.btnCashier {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: whitesmoke;
+}
+
+.btnAdmin {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: whitesmoke;
+}
+
+.lyrLogin {
+    -fx-background-color: linear-gradient(to bottom right, #390742 0%, #6D214F 100%);
+}
+
+.mainPane {
+    -fx-background-radius: 40;
+}
+
+.cashierPane {
+    -fx-background-color: linear-gradient(to left, #6D214F 0%, #38ada9 100%);
+}
+
+.reppotrPane {
+    -fx-background-color: linear-gradient(to left, #6D214F 0%, #ffffff 100%);
+}
+.reppotrHeadPane {
+    -fx-background-color: linear-gradient(to left, #55E6C1 0%, #6F1E51  100%);
+}
+.reppotrHeadPane2 {
+    -fx-background-color: linear-gradient(to left, #e056fd 0%, #182C61  100%);
+}
+.reppotrHeadPane3 {
+    -fx-background-color: linear-gradient(to left, #ff7979 0%, #006266 100%);
+}
+.adminPane {
+    -fx-background-color: linear-gradient(to left, #6D214F 0%, #38ada9 100%);
+}
+
+.menuBar {
+    -fx-background-radius: 50px 0px 0px 0px;
+}
+
+.btntest {
+    -fx-opacity: 50;
+}
+
+.titleBar {
+    -fx-background-radius: 0px 0px 0px 50px;
+}
+
+.adminDashBtnStyle {
+    -fx-background-color: linear-gradient(to left, #6D214F 0%, #130f40 100%);
+}
+
+.text-field {
+    -fx-text-fill: whitesmoke;
+}
+
+.addCageBar {
+    -fx-background-color: linear-gradient(to right, #a4b0be 0%, #F8EFBA 100%);
+}
+
+.txtFontStyle {
+    -fx-text-field: darkblue;
+    -fx-font-weight: 200;
+    -fx-font-style: oblique;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 30px;
+}
+
+.jfxTextFieldFontColour {
+    -fx-text-fill: whitesmoke;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 21px;
+}
+
+.jfx-date-picker.text-field {
+    -jfx-unfocus-color: blue;
+    -fx-prompt-text-fill: blueviolet;
+    -fx-text-fill: red;
+}
+
+.spinner {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 21pt;
+}
+
+.combo-box .cell:selected {
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 18px;
+}
+.combo-box {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 21px;
+}

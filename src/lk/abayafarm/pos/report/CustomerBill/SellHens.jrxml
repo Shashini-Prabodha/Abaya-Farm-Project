@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-06T12:42:07 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SellHens" pageWidth="300" pageHeight="300" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51526d4b-9357-4bb4-88cf-ef8ba212d36c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<!--<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AbayaFarm Data Adapter "/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="invoiceId" class="java.lang.String"/>
+	<parameter name="Qty" class="java.lang.String"/>
+	<parameter name="uprice" class="java.lang.String"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM batch]]>
+	</queryString>
+	<field name="batchId" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="qty" class="java.lang.Integer"/>
+	<field name="status" class="java.lang.String"/>
+	<group name="batchId">
+		<groupExpression><![CDATA[$F{batchId}]]></groupExpression>
+	</group>
+	<group name="type">
+		<groupExpression><![CDATA[$F{type}]]></groupExpression>
+	</group>
+	<group name="qty">
+		<groupExpression><![CDATA[$F{qty}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="94" y="66" width="66" height="18" uuid="96431715-9285-40b1-963d-231b09fc953a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="27" width="180" height="46" uuid="37ba7f1b-2d1b-49b2-94b2-ac276b4bc4ed"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="-3" width="220" height="30" uuid="30b3d405-9e1e-4430-8efc-6b30fc3dabf8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harrington" size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ABAYA   FARM]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="163" y="69" width="86" height="20" uuid="3294312e-0b9e-404c-b7e5-9c2270bf5398"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="244" y="69" width="19" height="16" uuid="4b7b5200-1842-43a0-bd54-e64bf5d8d7e2"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="68" width="40" height="16" uuid="85ba97bd-e750-4ebe-801d-2b363bc8d0be"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[INV . NO ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="48" y="67" width="66" height="20" uuid="47f934ad-8011-47f1-89dd-c83dd1cb5a4d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invoiceId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="-1" width="66" height="18" uuid="872fbdc2-5a36-4470-8581-5c03c2653d16"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[PRODUCT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="-1" width="54" height="18" uuid="61ea335d-f25b-4666-8c0d-f3ee9a94d2b0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="-1" width="80" height="18" uuid="baea8211-6066-4d67-b9db-f1fbe0c848ba"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[UNIT PRICE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="163" y="23" width="96" height="22" uuid="44f6dc91-a096-4622-961b-48b1e84cfa70"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{uprice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="23" width="90" height="18" uuid="e4bc4a34-294a-42e8-ad2d-79a062e543bd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Qty}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="23" width="54" height="18" uuid="57e08538-75ca-45a5-8477-324d52e33732"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[HENS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="55" width="54" height="18" uuid="36b523cc-50f5-43cd-b75d-bc803c6bab70"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="139" y="55" width="100" height="22" uuid="20a3d416-d641-4bc8-b349-2736199c8c8e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="4" y="-8" width="258" height="1" forecolor="#B0A7A7" uuid="e638ccd4-0bf4-4135-8df3-91bb41c7264b"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[--------------------------------------------------------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="2" width="252" height="20" uuid="94844d82-9fb9-4768-921f-03d1780d7d9f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[THANK  YOU .  PLEASE  COME  AGAIN .]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="12" width="62" height="24" uuid="a91dff61-e91f-4e11-9976-67ee39de681b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Software by SP 0719199866]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

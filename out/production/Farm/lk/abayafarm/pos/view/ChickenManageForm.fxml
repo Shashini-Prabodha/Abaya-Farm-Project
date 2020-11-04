@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="1020.0" prefWidth="1909.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.ChickenManageFormController">
+   <children>
+      <ImageView fitHeight="1066.0" fitWidth="1937.0" layoutX="-6.0" layoutY="-6.0" opacity="0.53" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/pngtree-minimalistic-polygonal-abstract-creative-geometric-background-polygontechnologybluebackground-image_49481.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="260.0" layoutY="118.0" prefHeight="21.0" prefWidth="1669.0" style="-fx-background-color: #6D214F;" text=" " />
+      <Label layoutX="656.0" layoutY="33.0" prefHeight="81.0" prefWidth="784.0" text="Chicken Management" textFill="#460246">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="63.0" />
+         </font>
+      </Label>
+      <Circle fill="#a6e6ff57" layoutX="135.0" layoutY="126.0" radius="127.0" stroke="#6d214f" strokeType="INSIDE" strokeWidth="20.0" />
+      <ImageView fx:id="imgAdmin" fitHeight="190.0" fitWidth="206.0" layoutX="37.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-businessman-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="143.0" layoutY="-2.0" prefHeight="21.0" prefWidth="1787.0" style="-fx-background-color: #6D214F;" text=" " />
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="1807.0" layoutY="37.0" onAction="#btnHomeOnAction" prefHeight="80.0" prefWidth="103.0" text=" ">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00b5c9" />
+                  <Stop color="#9136ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <graphic>
+            <ImageView fitHeight="73.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Dog%20House_96px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="1298.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/Chicken_100px.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="logoPane" layoutX="578.0" layoutY="240.0" prefHeight="727.0" prefWidth="969.0">
+         <children>
+            <Circle fill="#ffffff00" layoutX="441.0" layoutY="334.0" radius="280.0" stroke="#cfcfcf4f" strokeLineCap="ROUND" strokeWidth="20.0" />
+            <ImageView fitHeight="746.0" fitWidth="702.0" layoutX="119.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pngtree-rooster-logo-vector-design-icon-png-image_1928180.jpg" />
+               </image>
+            </ImageView>
+            <Label cache="true" layoutX="286.0" layoutY="331.0" prefHeight="80.0" prefWidth="340.0" text="Abaya Farm" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Algerian" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="-3.0" layoutY="227.0" prefHeight="765.0" prefWidth="379.0" stylesheets="@style/Login.css">
+         <children>
+            <JFXButton fx:id="btnSellBatch" buttonType="RAISED" focusTraversable="false" layoutX="1.0" layoutY="424.0" onAction="#btnSellBatchOnAction" prefHeight="100.0" prefWidth="398.0" style="-fx-background-color: #6D214F;" text=" Sell Batch" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/chik.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAddBatch" buttonType="RAISED" focusTraversable="false" layoutX="1.0" layoutY="129.0" onAction="#btnAddBatchOnAction" prefHeight="100.0" prefWidth="398.0" style="-fx-background-color: #6D214F;" text=" Add Batch" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/chik.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateBatch" buttonType="RAISED" focusTraversable="false" layoutX="1.0" layoutY="278.0" onAction="#btnUpdateBatchOnAction" prefHeight="100.0" prefWidth="398.0" style="-fx-background-color: #6D214F;" text="Update Batch" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="42.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+               <ripplerFill>
+                  <LinearGradient endX="0.4223300970873787" endY="1.0" startY="0.3300970873786408">
+                     <stops>
+                        <Stop color="#00d9e1e3" />
+                        <Stop color="#b02166" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/chik.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="37.0" fitWidth="52.0" layoutX="50.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/plus_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="30.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/update_left_rotation_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="52.0" layoutX="46.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/sell_property_100px.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="lblScroll1" layoutX="388.0" layoutY="129.0" prefHeight="100.0" prefWidth="11.0" style="-fx-background-color: #32e0c4;" />
+            <Pane fx:id="lblScroll2" layoutX="388.0" layoutY="278.0" prefHeight="100.0" prefWidth="11.0" style="-fx-background-color: #32e0c4;" />
+            <Pane fx:id="lblScroll3" layoutX="388.0" layoutY="424.0" prefHeight="100.0" prefWidth="11.0" style="-fx-background-color: #32e0c4;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="403.0" layoutY="143.0" prefHeight="918.0" prefWidth="1526.0">
+         <children>
+            <Label fx:id="lblOrderID" layoutX="171.0" layoutY="26.0" prefHeight="62.0" prefWidth="164.0" textFill="#b2021d">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

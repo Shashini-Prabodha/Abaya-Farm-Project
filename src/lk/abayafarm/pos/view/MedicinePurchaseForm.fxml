@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="923.0" prefWidth="1523.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.MedicinePurchaseFormController">
+   <children>
+      <ImageView fitHeight="922.0" fitWidth="1533.0" layoutX="-2.0" layoutY="1.0" opacity="0.41" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/unnamed%20(2).jpg" />
+         </image>
+      </ImageView>
+      <JFXDatePicker id="date" fx:id="clndrDate" layoutX="976.0" layoutY="29.0" prefHeight="56.0" prefWidth="343.0">
+         <defaultColor>
+            <RadialGradient centerX="0.5056818181818182" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#efff0f" />
+                  <Stop color="#efff0f" offset="0.007246376811594203" />
+                  <Stop color="#3c0a6b" offset="0.9963768115942029" />
+                  <Stop color="#3c0a6b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <Label layoutX="29.0" layoutY="123.0" opacity="0.41" prefHeight="241.0" prefWidth="782.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <Label layoutX="31.0" layoutY="376.0" opacity="0.41" prefHeight="130.0" prefWidth="1482.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <Label layoutX="845.0" layoutY="36.0" prefHeight="43.0" prefWidth="111.0" text="Date " textFill="#0a00c3">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbMedicineName" layoutX="278.0" layoutY="157.0" onAction="#cmbMedicineNameOnAction" onMouseClicked="#onMouseClickMedicineName" prefHeight="44.0" prefWidth="433.0" stylesheets="@style/Combo.css">
+         <styleClass>
+            <String fx:value="cell" />
+            <String fx:value="combo-box" />
+         </styleClass></JFXComboBox>
+      <JFXButton fx:id="btnBuy" buttonType="RAISED" layoutX="663.0" layoutY="541.0" onAction="#btnBuyOnAction" prefHeight="57.0" prefWidth="194.0" style="-fx-background-color: #D6A2E8; -fx-background-radius: 50;" text="Buy" textFill="#40004a">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="34.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane fx:id="logoPane" layoutX="21.0" layoutY="27.0">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="56.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/plusqq.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="82.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pill_26px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="231.0" layoutY="41.0" text="Order ID">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="827.0" layoutY="124.0" opacity="0.41" prefHeight="238.0" prefWidth="685.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="#0032bc" labelFloat="true" layoutX="660.0" layoutY="416.0" onAction="#txtqtyOnAction" prefHeight="54.0" prefWidth="344.0" promptText="Qty On Hand" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="75.0" layoutY="168.0" text="Medicine Name">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="Description" focusColor="#d30020" labelFloat="true" layoutX="68.0" layoutY="233.0" prefHeight="83.0" prefWidth="701.0" promptText="Description">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextArea>
+      <JFXComboBox fx:id="cmbSupplierName" layoutX="1051.0" layoutY="243.0" onAction="#cmbSupplierNameOnAction" onMouseClicked="#onMouseClickSupName" prefHeight="44.0" prefWidth="386.0" stylesheets="@style/Combo.css">
+         <styleClass>
+            <String fx:value="cell" />
+            <String fx:value="combo-box" />
+         </styleClass></JFXComboBox>
+      <Label layoutX="857.0" layoutY="257.0" text="Supplier Name">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCageID" layoutX="1047.0" layoutY="151.0" onAction="#cmbCageIDOnAction" prefHeight="44.0" prefWidth="296.0" stylesheets="@style/Combo.css">
+         <styleClass>
+            <String fx:value="cell" />
+            <String fx:value="combo-box" />
+         </styleClass></JFXComboBox>
+      <Label layoutX="858.0" layoutY="168.0" text="Cage ID">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="#0032bc" labelFloat="true" layoutX="103.0" layoutY="416.0" onAction="#txtUnitPriceOnAction" prefHeight="54.0" prefWidth="437.0" promptText="Unit Price (Rs)" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTotal" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="1098.0" layoutY="415.0" prefHeight="54.0" prefWidth="369.0" promptText="Total" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblMedicineDetails" layoutX="63.0" layoutY="633.0" prefHeight="262.0" prefWidth="1405.0" stylesheets="@style/newTableStyles.css">
+        <columns>
+          <TableColumn fx:id="colMedicineID" prefWidth="182.66668701171875" text="Medicine ID" />
+            <TableColumn fx:id="colMedicineName" prefWidth="355.6666259765625" text="Medicine Name" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="267.3333740234375" text="Qty On Hand" />
+            <TableColumn fx:id="colDescription" prefWidth="598.3333740234375" text="Description" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header-background" />
+            <String fx:value="column-header" />
+            <String fx:value="label" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="725.0" layoutY="152.0" onAction="#btnAddNewOnAction" prefHeight="62.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/joyent_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#39fff5" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="1439.0" layoutY="10.0" onAction="#btnCloseOnAction" prefHeight="58.0" prefWidth="65.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Cancel_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff2727" />
+                  <Stop color="#f6ffaa" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblOrder" layoutX="365.0" layoutY="24.0" prefHeight="92.0" prefWidth="267.0" textFill="#0300bf">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="55.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSupplierAdd" buttonType="RAISED" layoutX="1435.0" layoutY="240.0" onAction="#btnSupplierAddOnAction" prefHeight="62.0" prefWidth="57.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="57.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/add_user_male_px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#39fff5" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

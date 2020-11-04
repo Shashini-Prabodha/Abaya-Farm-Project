@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="574.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.AddNewCageFromController">
+   <children>
+      <ImageView fitHeight="582.0" fitWidth="801.0" layoutY="-1.0" opacity="0.51" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/cools-iphone-slide-templates.jpeg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="logoPane" layoutX="7.0" layoutY="17.0">
+         <children>
+            <ImageView fitHeight="68.0" fitWidth="73.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Log%20Cabinpx.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="68.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/plusqq.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="728.0" layoutY="14.0" onAction="#btnCloseOnAction" prefHeight="58.0" prefWidth="65.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Cancel_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff2727" />
+                  <Stop color="#f6ffaa" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Label layoutX="34.0" layoutY="173.0" opacity="0.41" prefHeight="278.0" prefWidth="732.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" styleClass="menuBar" stylesheets="@style/Login.css" text=" " />
+      <Label layoutX="83.0" layoutY="195.0" prefHeight="64.0" prefWidth="142.0" text="Cage ID" textFill="#390000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCageID" layoutX="262.0" layoutY="200.0" prefHeight="58.0" prefWidth="164.0" textFill="#b20000">
+         <font>
+            <Font name="Times New Roman" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="329.0" prefHeight="64.0" prefWidth="313.0" text="Max Quantity (Birds)">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddCage" buttonType="RAISED" layoutX="309.0" layoutY="483.0" onAction="#btnAddCageOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #D6A2E8; -fx-background-radius: 50;" text="Add Cage" textFill="#40004a">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="27.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane layoutX="420.0" layoutY="329.0" prefHeight="70.0" prefWidth="305.0" style="-fx-background-color: #D980FA; -fx-background-radius: 40;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="7.0" layoutY="3.0" onAction="#subOnAction" style="-fx-background-radius: 50;" text="-" textFill="#5e0061">
+               <font>
+                  <Font name="Wide Latin" size="36.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#15c5ff" />
+                        <Stop color="#ff7a80" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="231.0" layoutY="4.0" onAction="#plusOnAction" style="-fx-background-radius: 50;" text="+" textFill="#5e0061">
+               <font>
+                  <Font name="Wide Latin" size="36.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#15c5ff" />
+                        <Stop color="#ff7a80" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane fx:id="Panecounter" layoutX="119.0" layoutY="3.0" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 100;">
+               <children>
+                  <JFXTextField fx:id="txtMaxQty" alignment="CENTER" focusColor="#405aa800" layoutY="2.0" prefHeight="64.0" prefWidth="66.0" text="0" unFocusColor="#4d4d4d00">
+                     <font>
+                        <Font name="Times New Roman Bold" size="27.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="866.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.SellBatchFormController">
+   <children>
+      <Label layoutX="110.0" layoutY="246.0" opacity="0.41" prefHeight="493.0" prefWidth="1288.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <JFXTextField fx:id="txtBatchID" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="951.0" layoutY="121.0" prefHeight="80.0" prefWidth="314.0" promptText="Batch ID" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="45.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="256.0" layoutY="429.0" onAction="#txtQtyOnAction" prefHeight="54.0" prefWidth="320.0" promptText="Quantity" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="254.0" layoutY="317.0" text="ChickenType">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="527.0" layoutY="305.0" prefHeight="59.0" prefWidth="523.0" spacing="70.0">
+         <children>
+            <JFXRadioButton fx:id="rbtnChick" lineSpacing="50.0" onAction="#rbtnOnAction" text="chick">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rbtnGrower" lineSpacing="50.0" onAction="#rbtnOnAction" text="grower" toggleGroup="$group">
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rbtnLayer" lineSpacing="50.0" onAction="#rbtnOnAction" text="layer" toggleGroup="$group">
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <JFXTextArea fx:id="Description" focusColor="#d30020" labelFloat="true" layoutX="251.0" layoutY="554.0" prefHeight="114.0" prefWidth="647.0" promptText="Description">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextArea>
+      <Label layoutX="169.0" layoutY="136.0" prefHeight="64.0" prefWidth="142.0" text="Cage " textFill="#390000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="50.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCageId" layoutX="293.0" layoutY="142.0" onAction="#cmbCageIdOnAction" prefHeight="54.0" prefWidth="221.0" stylesheets="@style/Combo.css">
+         <styleClass>
+            <String fx:value="cell" />
+            <String fx:value="combo-box" />
+         </styleClass></JFXComboBox>
+      <Pane fx:id="logoPane" layoutX="1294.0" layoutY="19.0">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/chick_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="66.0" fitWidth="80.0" layoutX="97.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/expensive_100px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtUnitPrice" focusColor="#0032bc" labelFloat="true" layoutX="818.0" layoutY="430.0" onAction="#txtUnitPriceOnAction" onKeyReleased="#unitPriceKeyOnAction" prefHeight="54.0" prefWidth="312.0" promptText="Rate Per Chicken" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="1147.0" layoutY="442.0" prefHeight="34.0" prefWidth="66.0" text="Rs">
+         <font>
+            <Font name="Times New Roman Italic" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSell" buttonType="RAISED" layoutX="660.0" layoutY="769.0" onAction="#btnSellOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #f6e58d; -fx-background-radius: 50;" text="Sell">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker id="date" fx:id="clndrDate" layoutX="894.0" layoutY="16.0" prefHeight="56.0" prefWidth="335.0">
+         <defaultColor>
+            <RadialGradient centerX="0.5056818181818182" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#efff0f" />
+                  <Stop color="#efff0f" offset="0.007246376811594203" />
+                  <Stop color="#3c0a6b" offset="0.9963768115942029" />
+                  <Stop color="#3c0a6b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <Label layoutX="806.0" layoutY="26.0" prefHeight="43.0" prefWidth="111.0" text="Date ">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="928.0" layoutY="566.0" opacity="0.41" prefHeight="125.0" prefWidth="447.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <Label layoutX="962.0" layoutY="601.0" prefHeight="54.0" prefWidth="136.0" text="Total" textFill="#ae0000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1093.0" layoutY="585.0" prefHeight="78.0" prefWidth="256.0" textFill="#ae0000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

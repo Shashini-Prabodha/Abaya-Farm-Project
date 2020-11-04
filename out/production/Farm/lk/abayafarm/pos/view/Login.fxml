@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="587.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.LoginController">
+   <children>
+      <Pane fx:id="mainPane" prefHeight="587.0" prefWidth="984.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="587.0" fitWidth="998.0" layoutX="-12.0" opacity="0.67" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/260164.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" focusTraversable="false" layoutX="635.0" layoutY="423.0" onAction="#btnLoginOnAction" prefHeight="52.0" prefWidth="121.0" style="-fx-background-color: #470952; -fx-background-radius: 30;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Victorian LET Plain:1.0" size="22.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0097c9" />
+                        <Stop color="#ff05ea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </JFXButton>
+            <ImageView fx:id="imgCasheirName" fitHeight="35.0" fitWidth="31.0" layoutX="878.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Name_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgCashierPassword" fitHeight="35.0" fitWidth="31.0" layoutX="879.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Lock%202_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="72.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane fx:id="logoPane" layoutX="14.0" layoutY="118.0" prefHeight="352.0" prefWidth="433.0">
+               <children>
+                  <Circle fill="#ffffff00" layoutX="246.0" layoutY="181.0" radius="155.0" stroke="#cfcfcf4f" strokeLineCap="ROUND" strokeWidth="20.0" />
+                  <ImageView fitHeight="377.0" fitWidth="340.0" layoutX="84.0" layoutY="15.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/pngtree-rooster-logo-vector-design-icon-png-image_1928180.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label cache="true" layoutX="179.0" layoutY="169.0" prefHeight="53.0" prefWidth="138.0" text="Abaya Farm" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                     <font>
+                        <Font name="Algerian" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="txtDescription" editable="false" focusColor="#405aa800" layoutX="17.0" layoutY="14.0" prefHeight="296.0" prefWidth="480.0" text="We are an enterprice that focuses on agricultural supplies &amp; eggs. The business was started in 1985 with about 100 hens and has been running continuously for 40 years. &#10;&#10;            At present about 1000 hens are being reared and 4 chicken cages are being maintained at present. Mr.Nandapala Abeygunasekera, the original founder of Abaya farm, still successfully maintains and maintains this business." unFocusColor="#4d4d4d00">
+                     <font>
+                        <Font name="Baskerville-Normal-Italic" size="18.0" />
+                     </font>
+                  </JFXTextArea>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Label fx:id="lblCaption" layoutX="28.0" layoutY="29.0" prefHeight="54.0" prefWidth="326.0" text="Abaya Farm">
+               <font>
+                  <Font name="Algerian" size="47.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#a40081" />
+                        <Stop color="#01cdbf" offset="0.4901960784313726" />
+                        <Stop color="#002e8a" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblVerstion" layoutX="420.0" layoutY="558.0" prefHeight="23.0" prefWidth="104.0" text="V .  1 . 0 . 0 ">
+               <font>
+                  <Font name="Harrington" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="imgFB" layoutX="101.0" layoutY="441.0" onAction="#fbHyperlinkOnAction" prefHeight="54.0" prefWidth="70.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/facebook-circled-shake.gif" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="imgWeb" layoutX="184.0" layoutY="440.0" onAction="#webHyperlinkOnAction" prefHeight="54.0" prefWidth="54.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/chrome.gif" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="imgWhat" layoutX="260.0" layoutY="438.0" onMouseEntered="#whatsppMovesOnAction" prefHeight="58.0" prefWidth="76.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="57.0" onMouseClicked="#imgWhatOnMouse" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/whatsapp-click.gif" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLinkedIn" layoutX="345.0" layoutY="440.0" onAction="#btnLinkedInOnAction" prefHeight="58.0" prefWidth="70.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/linkedin-circled-scale.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane id="cashierPane" fx:id="cashierPane" layoutX="872.0" layoutY="-85.0" prefHeight="215.0" prefWidth="114.0" style="-fx-background-radius: 200;" styleClass="cashierPane" stylesheets="@style/Login.css">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="104.0" layoutX="6.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-salary-male-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtCashierUserName" focusColor="#ae0000" labelFloat="true" layoutX="501.0" layoutY="181.0" prefHeight="31.0" prefWidth="371.0" promptText="User Name" unFocusColor="#807d7d">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtCashierPassword" focusColor="#ae0000" labelFloat="true" layoutX="501.0" layoutY="289.0" prefHeight="35.0" prefWidth="371.0" promptText="Password">
+         <font>
+            <Font name="Times New Roman" size="19.0" />
+         </font>
+      </JFXPasswordField>
+      <AnchorPane id="lyrLogin" fx:id="lyrLogin" nodeOrientation="LEFT_TO_RIGHT" prefHeight="587.0" prefWidth="459.0" styleClass="lyrLogin" stylesheets="@style/Login.css">
+         <children>
+            <JFXButton id="btnAdmin" fx:id="btnAbout" buttonType="RAISED" focusTraversable="false" layoutX="164.0" layoutY="361.0" onAction="#btnAboutOnAction" prefHeight="19.0" prefWidth="121.0" style="-fx-border-radius: 30;" styleClass="btnAdmin" stylesheets="@style/Login.css" text="About" textFill="WHITE">
+               <font>
+                  <Font name="Victorian LET Plain:1.0" size="21.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.22815533980582525">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="0.007246376811594203" />
+                        <Stop color="#ff00c8" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label layoutX="109.0" layoutY="93.0" text="Abaya Farm" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="47.0" />
+               </font>
+            </Label>
+            <JFXButton id="btnCashier" fx:id="btnCashier" buttonType="RAISED" focusTraversable="false" layoutX="167.0" layoutY="361.0" onAction="#btnCashierOnAction" prefHeight="40.0" prefWidth="114.0" style="-fx-border-radius: 30;" styleClass="btnCashier" stylesheets="@style/Login.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Victorian LET Plain:1.0" size="21.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="#ff05ea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fitHeight="104.0" fitWidth="125.0" layoutX="311.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-chicken-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="176.0" prefHeight="53.0" prefWidth="326.0" text="Our intention is to provide maximum service to all clients" textFill="WHITE">
+               <font>
+                  <Font name="Pristina" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="169.0" layoutY="171.0" prefHeight="5.0" prefWidth="121.0" />
+            <Label layoutX="161.0" layoutY="520.0" prefHeight="53.0" prefWidth="209.0" text="Have a Nice Day.......!" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Pristina" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

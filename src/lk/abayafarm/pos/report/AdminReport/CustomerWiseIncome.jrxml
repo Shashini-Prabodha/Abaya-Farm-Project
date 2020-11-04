@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T10:21:00 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerWiseIncome" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a39e8d26-879b-4605-a470-1b0ebd5aa8f2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString language="SQL">
+		<![CDATA[SELECT c.custId,c.custName, SUM(i.total) AS total FROM customer c,orders o ,income i
+WHERE c.custId=o.custId and i.orderId=o.orderId
+GROUP BY c.custId ORDER BY 3 DESC]]>
+	</queryString>
+	<field name="custId" class="java.lang.String"/>
+	<field name="custName" class="java.lang.String"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<group name="custId">
+		<groupExpression><![CDATA[$F{custId}]]></groupExpression>
+	</group>
+	<group name="custName">
+		<groupExpression><![CDATA[$F{custName}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="-6" width="190" height="30" uuid="3aac673d-89bd-44eb-917c-5c14892a4248"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harrington" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="29" width="160" height="30" uuid="dd8f9d15-e33d-4e11-8d6f-ec0429ad7b3f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="63" width="185" height="20" uuid="cf812224-ec90-41a9-ba17-883fad51b666"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER WISE INCOME]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="-82" width="536" height="3" forecolor="#BABABA" uuid="20d4bf07-1e9d-4dcd-966e-65a82ea73fb1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="414" y="30" width="88" height="16" uuid="412107f3-371e-490a-a199-8c94a7c65c79"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="491" y="30" width="53" height="16" uuid="fa9602c7-0a3e-4943-92ff-e32795f54cec"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<line>
+				<reportElement x="17" y="6" width="536" height="3" forecolor="#BABABA" uuid="90e8cfce-66f1-4179-8e2a-7273a8e8f8bc"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="18" y="15" width="110" height="19" uuid="6eee02fa-58db-4e79-b2aa-1398574bbb3e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="15" width="110" height="19" uuid="da4e1447-01ba-4727-be0d-4974c221c992"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="15" width="110" height="19" uuid="f93954c3-32e4-40df-b5be-44ac9c5b0769"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="19" y="42" width="536" height="3" forecolor="#BABABA" uuid="1cc660bd-f4c4-4db4-bb97-b26211978aea"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="110" height="19" uuid="32d9c908-b8f3-4227-a7a4-22027db2424f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="0" width="110" height="19" uuid="f5611d8c-0363-4c11-a89e-6f59c9254384"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="110" height="19" uuid="779b344d-6652-4ee7-879d-17aadb2f9c15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="11" y="1" width="536" height="3" forecolor="#BABABA" uuid="2e56e134-6c1d-447d-a17d-439fc0e96245"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="210" y="17" width="100" height="20" uuid="e2341b6e-399c-4e62-8cad-bc372251a7c9"/>
+				<textElement>
+					<font fontName="Harrington" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Software by SP]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="366.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.AddNewMedicineFormController">
+   <children>
+      <ImageView fitHeight="481.0" fitWidth="1051.0" layoutX="-2.0" layoutY="-8.0" opacity="0.5" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/istockphoto-1159204285-612x612.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtMedicineName" focusColor="#0032bc" labelFloat="true" layoutX="80.0" layoutY="141.0" prefHeight="54.0" prefWidth="437.0" promptText="Medicine Name" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="txtDescription" focusColor="#d30020" labelFloat="true" layoutX="78.0" layoutY="255.0" prefHeight="83.0" prefWidth="882.0" promptText="Description">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextField fx:id="txtMedicineID" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="666.0" layoutY="136.0" prefHeight="54.0" prefWidth="285.0" promptText="Medicine ID" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="350.0" layoutY="26.0" prefHeight="49.0" prefWidth="430.0" text="Add New Medicine" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="47.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#003cff" />
+                  <Stop color="#6e0675" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="btnAddNewMedicine" buttonType="RAISED" layoutX="478.0" layoutY="357.0" onAction="#btnAddNewMedicineOnAction" prefHeight="91.0" prefWidth="101.0" style="-fx-background-color: #D6A2E8; -fx-background-radius: 50;" text=" " textFill="#40004a">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="27.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pill_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="37.0" fitWidth="25.0" layoutX="530.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/plusqq.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="963.0" layoutY="11.0" onAction="#btnCloseOnAction" prefHeight="58.0" prefWidth="65.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Cancel_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff2727" />
+                  <Stop color="#f6ffaa" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+      </JFXButton>
+      <Pane fx:id="imgLogo" layoutX="44.0" layoutY="37.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="43.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/plusqq.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pill_26px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

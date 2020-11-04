@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T11:07:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MedicineUsage" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0f2b538-623b-41ce-a4cb-7b0a1e166b1e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString language="SQL">
+		<![CDATA[SELECT m.medicineName,md.* FROM medicineDetails md,medicine m
+ WHERE m.medicineId=md.medicineId]]>
+	</queryString>
+	<field name="medicineName" class="java.lang.String"/>
+	<field name="medicineId" class="java.lang.String"/>
+	<field name="cageId" class="java.lang.String"/>
+	<field name="usedQty" class="java.lang.Integer"/>
+	<field name="date" class="java.sql.Date"/>
+	<group name="medicineName">
+		<groupExpression><![CDATA[$F{medicineName}]]></groupExpression>
+	</group>
+	<group name="medicineId">
+		<groupExpression><![CDATA[$F{medicineId}]]></groupExpression>
+	</group>
+	<group name="cageId">
+		<groupExpression><![CDATA[$F{cageId}]]></groupExpression>
+	</group>
+	<group name="usedQty">
+		<groupExpression><![CDATA[$F{usedQty}]]></groupExpression>
+	</group>
+	<group name="date">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="-6" width="190" height="30" uuid="828d98c3-f8a1-4791-b0de-ac878676e08a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harrington" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="29" width="160" height="30" uuid="b23dd9b2-785b-4f31-b1bf-c8e98e56dc06"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="64" width="232" height="20" uuid="c26deb22-9b2a-4db9-9bea-862dc0360fd6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[MEDICINE USAGE REPORT]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="410" y="36" width="88" height="16" uuid="70ce04f9-8d8c-4510-8ffe-af4c19f24d18"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="487" y="36" width="53" height="16" uuid="a9d80c3d-c6e1-44e8-8fa2-3d073fad39d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="92" width="552" height="1" forecolor="#BABABA" uuid="15b98aed-11d5-4e5a-a866-8e19894b6b6f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="124" y="0" width="111" height="14" uuid="4327c0b7-7f04-474e-96d2-befab286061c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="111" height="14" uuid="86db726d-1d1b-4239-888f-edc7744aaea6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="111" height="14" uuid="61938ee5-146a-4b66-9413-7e0bf6a92c0c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="0" width="111" height="14" uuid="cdd10efa-3da8-4417-88f2-35fb3e3610c5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Used Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="0" width="111" height="14" uuid="77c25a3e-6af9-4537-a6b1-10cc1e71cc45"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="552" height="1" forecolor="#BABABA" uuid="ed5203b8-fd0f-4a80-af50-348185cbb644"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="131" y="0" width="111" height="14" uuid="5a10446c-6cb1-4fbc-bb46-f33b49ee7fa7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicineName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="80" height="14" uuid="9c412ab6-f19a-41ca-9e96-ec5a198cabe1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{medicineId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="111" height="14" uuid="dcb18fad-eaa0-4ff6-9182-26fe78406a5a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cageId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="111" height="14" uuid="3782123b-e249-41eb-9c79-830711daed37"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usedQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="1" width="111" height="14" uuid="57844cb6-e4f5-4c50-85b8-49cc6bf2bdc8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="-7" y="4" width="552" height="1" forecolor="#BABABA" uuid="4b685d4b-b1bd-4f6c-91f5-7221bb3b800e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="210" y="17" width="100" height="20" uuid="7e9ff381-635a-4503-b2be-e6b89d01416e"/>
+				<textElement>
+					<font fontName="Harrington" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Software by SP]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

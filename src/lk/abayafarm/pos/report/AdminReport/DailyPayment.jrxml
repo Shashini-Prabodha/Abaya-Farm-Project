@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-08T11:42:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyPayment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f356c18-f063-49dd-b706-a1868f0faf1e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString language="SQL">
+		<![CDATA[SELECT supOrd.supOrderId, sup.supplierName, c.cageId,supOrd.description,supOrd.qtyOnHand,supOrd.unitPrice,(qtyOnHand*unitPrice) as total
+FROM supplierOrder supOrd,supplier sup,cage c
+WHERE supOrd.supplierId=sup.supplierId and supOrd.batchId=c.batchId and supOrd.date=CURRENT_DATE]]>
+	</queryString>
+	<field name="supOrderId" class="java.lang.String"/>
+	<field name="supplierName" class="java.lang.String"/>
+	<field name="cageId" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="qtyOnHand" class="java.lang.Integer"/>
+	<field name="unitPrice" class="java.math.BigDecimal"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<group name="supOrderId">
+		<groupExpression><![CDATA[$F{supOrderId}]]></groupExpression>
+	</group>
+	<group name="supplierName">
+		<groupExpression><![CDATA[$F{supplierName}]]></groupExpression>
+	</group>
+	<group name="cageId">
+		<groupExpression><![CDATA[$F{cageId}]]></groupExpression>
+	</group>
+	<group name="description">
+		<groupExpression><![CDATA[$F{description}]]></groupExpression>
+	</group>
+	<group name="qtyOnHand">
+		<groupExpression><![CDATA[$F{qtyOnHand}]]></groupExpression>
+	</group>
+	<group name="unitPrice">
+		<groupExpression><![CDATA[$F{unitPrice}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="112" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="-6" width="190" height="30" uuid="27a05a04-a633-41a9-a797-93b4adb4bbc0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harrington" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="29" width="160" height="30" uuid="7a0d89e4-0500-4ceb-8d14-592aa086d44f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="63" width="185" height="20" uuid="1af0cb2a-6adf-4d91-8f7a-7169a7ee48c2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[DAILY  PAYMENT  REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="74" height="22" uuid="05257be8-b655-4e40-b1a9-cbb8623a7b31"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="22" uuid="a79ae5c2-137e-489c-b42f-3dbfcf108b3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[supplierName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="22" uuid="9d06820d-c822-4094-b746-009fa03accf7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cage ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="22" uuid="051e05da-3ac1-4cf3-a63e-bbe4989ffb85"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="22" uuid="c75aa636-d967-40a4-8503-d62962ef81fd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty On Hand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="22" uuid="f9ed87ce-d397-43e8-8d91-91dbd33adf33"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="22" uuid="f7f2984a-8a2f-4ac5-b13b-88006a09e63c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="21" y="8" width="66" height="22" uuid="f021cba2-dac9-4243-85fd-13b6c1aef584"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supOrderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="8" width="94" height="22" uuid="e1621b2d-547b-4782-b2bc-0bde3898dc0a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplierName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="8" width="59" height="22" uuid="7bca283c-dd70-4aa6-b773-5e9c4bf2c723"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cageId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="8" width="90" height="22" uuid="d8e64a3e-34f6-4ca5-96b9-b85a96b9a38e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="8" width="61" height="22" uuid="55543f24-cde5-4139-916d-8aac472f15ba"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtyOnHand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="8" width="70" height="22" uuid="b6e0b598-fc89-438c-baf6-902433f2a1ab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="8" width="58" height="22" uuid="2f0f6cca-d410-447b-8b4a-4cbf731ab2af"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="4" width="536" height="3" forecolor="#BABABA" uuid="02cd8004-f6f0-4824-a966-5f29de60fb34"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="223" y="17" width="100" height="20" uuid="fff405a8-4e14-418d-ba4d-bd4e34b1dcbb"/>
+				<textElement>
+					<font fontName="Harrington" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Software by SP]]></text>
+			</staticText>
+			<line>
+				<reportElement x="5" y="-82" width="536" height="3" forecolor="#BABABA" uuid="a094f956-eb89-4dc1-a9d7-a50e76b7bfdb"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="7" y="-51" width="536" height="3" forecolor="#BABABA" uuid="00c48011-e79f-413a-b1c5-a32897e4d1c7"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

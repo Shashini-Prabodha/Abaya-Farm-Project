@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T10:49:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Store" pageWidth="305" pageHeight="400" columnWidth="265" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4831b32e-bde3-4410-9f22-a2574a74368a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<!--<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AbayaFarm Data Adapter "/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM Store]]>
+	</queryString>
+	<field name="storeId" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="qtyOnStore" class="java.lang.Integer"/>
+	<field name="unitPrice" class="java.math.BigDecimal"/>
+	<group name="storeId">
+		<groupExpression><![CDATA[$F{storeId}]]></groupExpression>
+	</group>
+	<group name="type">
+		<groupExpression><![CDATA[$F{type}]]></groupExpression>
+	</group>
+	<group name="qtyOnStore">
+		<groupExpression><![CDATA[$F{qtyOnStore}]]></groupExpression>
+	</group>
+	<group name="unitPrice">
+		<groupExpression><![CDATA[$F{unitPrice}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="0" width="125" height="30" uuid="9e8bb0a4-e5b3-4a86-8c08-bfa4dcaf96a6"/>
+				<textElement>
+					<font fontName="Harrington" size="22"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="25" width="100" height="43" uuid="35e2073a-ac6a-41db-a07c-35b62f923d0b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="3" width="70" height="16" uuid="52025ff0-ad6b-4d3b-9a63-abf291cd0833"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[storeId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="3" width="70" height="16" uuid="24b868b9-5707-4ad1-8dc1-5ca236571fec"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="3" width="70" height="16" uuid="20b99b73-af8a-4ba5-b1dd-29d5efd65edc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[qtyOnStore]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="4" width="70" height="16" uuid="05fd3ca7-7db9-4b4b-a02f-5c229d8ff15b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[unitPrice]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="-2" y="2" width="70" height="16" uuid="290f4581-6ca2-41bb-8ed7-d22728bb91e5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{storeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="3" width="70" height="16" uuid="886d0991-50bd-4162-9dae-346c2ee5113f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="2" width="75" height="16" uuid="681778df-5cbf-4815-8cd0-52e1e8c90f4d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qtyOnStore}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="5" width="70" height="16" uuid="93dc80c9-93f6-4077-9f3f-89aa8d3ab6a9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

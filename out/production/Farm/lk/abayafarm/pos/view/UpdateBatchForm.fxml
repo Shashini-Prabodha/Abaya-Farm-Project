@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="866.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.UpdateBatchFormController">
+   <children>
+      <Label layoutX="59.0" layoutY="232.0" opacity="0.41" prefHeight="562.0" prefWidth="1388.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <JFXTextField fx:id="txtBatchID" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="941.0" layoutY="111.0" prefHeight="80.0" prefWidth="314.0" promptText="Batch ID" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="45.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="328.0" layoutY="488.0" prefHeight="54.0" prefWidth="249.0" promptText="Amount taken" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="330.0" layoutY="319.0" text="ChickenType">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="611.0" layoutY="306.0" prefHeight="59.0" prefWidth="523.0" spacing="70.0">
+         <children>
+            <JFXRadioButton fx:id="rbtnChick" lineSpacing="50.0" onAction="#rbtnOnAction" text="chick">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rbtnGrower" lineSpacing="50.0" onAction="#rbtnOnAction" text="grower" toggleGroup="$group">
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rbtnLayer" lineSpacing="50.0" onAction="#rbtnOnAction" text="layer" toggleGroup="$group">
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <Label layoutX="159.0" layoutY="126.0" prefHeight="64.0" prefWidth="142.0" text="Cage " textFill="#390000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="50.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCageId" layoutX="304.0" layoutY="132.0" onAction="#cmbCageIdOnAction" prefHeight="54.0" prefWidth="200.0" stylesheets="@style/Combo.css">
+         <styleClass>
+            <String fx:value="cell" />
+            <String fx:value="combo-box" />
+         </styleClass></JFXComboBox>
+      <Pane fx:id="logoPane" layoutX="1284.0" layoutY="9.0">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/chick_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="66.0" fitWidth="80.0" layoutX="97.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/available_updates_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="661.0" layoutY="646.0" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #D6A2E8; -fx-background-radius: 50;" text="Update">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="765.0" layoutY="491.0" prefHeight="44.0" prefWidth="182.0" text="Available Qty" textFill="#2f2f2f">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="972.0" layoutY="485.0" prefHeight="70.0" prefWidth="305.0" style="-fx-background-color: #a6f6f1; -fx-background-radius: 40;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="3.0" onAction="#subOnAction" style="-fx-background-radius: 50;" text="-" textFill="#5e0061">
+               <font>
+                  <Font name="Wide Latin" size="36.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#15c5ff" />
+                        <Stop color="#bcff7a" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="231.0" layoutY="4.0" onAction="#plusOnAction" style="-fx-background-radius: 50;" text="+" textFill="#5e0061">
+               <font>
+                  <Font name="Wide Latin" size="36.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#15c5ff" />
+                        <Stop color="#bcff7a" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Pane fx:id="Panecounter" layoutX="119.0" layoutY="3.0" prefHeight="64.0" prefWidth="64.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 100;">
+               <children>
+                  <Label fx:id="lblAvilableQty" alignment="CENTER" layoutY="-1.0" prefHeight="66.0" prefWidth="64.0" text="0" textFill="#35009e">
+                     <font>
+                        <Font name="Times New Roman Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

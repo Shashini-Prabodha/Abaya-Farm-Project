@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="1030.0" fitWidth="1932.0" layoutX="-3.0" opacity="0.51" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/pngtree-minimalistic-polygonal-abstract-creative-geometric-background-polygontechnologybluebackground-image_49481.jpg" />
+         </image>
+      </ImageView>
+      <Pane fx:id="logoPane" layoutX="661.0" layoutY="230.0" prefHeight="727.0" prefWidth="969.0">
+         <children>
+            <Circle fill="#ffffff00" layoutX="441.0" layoutY="334.0" radius="280.0" stroke="#cfcfcf4f" strokeLineCap="ROUND" strokeWidth="20.0" />
+            <ImageView fitHeight="746.0" fitWidth="702.0" layoutX="119.0" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/pngtree-rooster-logo-vector-design-icon-png-image_1928180.jpg" />
+               </image>
+            </ImageView>
+            <Label cache="true" layoutX="286.0" layoutY="331.0" prefHeight="80.0" prefWidth="340.0" text="Abaya Farm" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Algerian" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="248.0" layoutY="139.0" prefHeight="21.0" prefWidth="1681.0" style="-fx-background-color: #6D214F;" text=" " />
+      <Label layoutX="1369.0" layoutY="209.0" prefHeight="49.0" prefWidth="99.0" text="Date " textFill="#0d00ff">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="42.0" prefHeight="81.0" prefWidth="784.0" text="Customer Management" textFill="#460246">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="63.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="291.0" opacity="0.41" prefHeight="299.0" prefWidth="1656.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <Circle fill="#f5acff57" layoutX="125.0" layoutY="124.0" radius="127.0" stroke="#6d214f" strokeType="INSIDE" strokeWidth="20.0" />
+      <ImageView fx:id="imgAdmin" fitHeight="190.0" fitWidth="206.0" layoutX="28.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-businessman-100.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="673.0" layoutY="504.0" onAction="#btnSaveOnAction" prefHeight="64.0" prefWidth="169.0" style="-fx-background-color: #B53471; -fx-background-radius: 50;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00fff6" />
+                  <Stop color="#ff4040" offset="0.9963768115942029" />
+                  <Stop color="#ff4040" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="clndrDate" defaultColor="#009ea1" layoutX="1484.0" layoutY="194.0" prefHeight="56.0" prefWidth="357.0" />
+      <ImageView fitHeight="106.0" fitWidth="96.0" layoutX="1333.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/add_user_male_100px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="157.0" layoutY="-5.0" prefHeight="21.0" prefWidth="1775.0" style="-fx-background-color: #6D214F;" text=" " />
+      <JFXButton fx:id="btnHome" buttonType="RAISED" layoutX="1812.0" layoutY="46.0" onAction="#btnHomeOnAction" prefHeight="80.0" prefWidth="103.0" text=" ">
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00b5c9" />
+                  <Stop color="#9136ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <graphic>
+            <ImageView fitHeight="73.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/Dog%20House_96px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="212.0" layoutY="628.0" prefHeight="381.0" prefWidth="1372.0" stylesheets="@style/newTableStyles.css">
+        <columns>
+          <TableColumn fx:id="colCustID" prefWidth="237.66664123535156" text="Customer ID" />
+          <TableColumn fx:id="colName" prefWidth="533.3333129882812" text="Name" />
+            <TableColumn fx:id="colTP" prefWidth="330.6666259765625" text="Telephone No" />
+            <TableColumn fx:id="colDelete" prefWidth="264.3333740234375" text="Delete" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="column-header-background" />
+            <String fx:value="label" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <JFXTextField fx:id="txtCustomerName" focusColor="#0032bc" labelFloat="true" layoutX="303.0" layoutY="376.0" prefHeight="54.0" prefWidth="666.0" promptText="Customer Name" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerTP" focusColor="#0032bc" labelFloat="true" layoutX="1205.0" layoutY="369.0" prefHeight="54.0" prefWidth="482.0" promptText="TP" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="413.0" layoutY="202.0" text="Customer ID">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerID" layoutX="611.0" layoutY="194.0" prefHeight="78.0" prefWidth="268.0" textFill="#00108d">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="49.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1016.0" layoutY="502.0" onAction="#btnUpdateOnAction" prefHeight="64.0" prefWidth="173.0" style="-fx-background-color: #B53471; -fx-background-radius: 50;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00fff6" />
+                  <Stop color="#ff4040" offset="0.9963768115942029" />
+                  <Stop color="#ff4040" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane layoutX="1629.0" layoutY="727.0">
+         <children>
+            <JFXButton fx:id="btnCustomerwiseIncome" alignment="TOP_CENTER" buttonType="RAISED" layoutX="15.0" layoutY="11.0" onAction="#btnCustomerwiseIncomeOnAction" prefHeight="230.0" prefWidth="241.0" style="-fx-background-radius: 500; -fx-background-color: #6D214F;" text=" " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="30.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#b600c3" />
+                        <Stop color="#48f6ff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="94.0" fitWidth="87.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/euro_money_80px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label alignment="BASELINE_CENTER" layoutX="41.0" layoutY="107.0" prefHeight="43.0" prefWidth="191.0" text="Customer " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="38.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_CENTER" layoutX="45.0" layoutY="176.0" prefHeight="43.0" prefWidth="191.0" text="Income" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="38.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_CENTER" layoutX="75.0" layoutY="141.0" prefHeight="43.0" prefWidth="130.0" text="wise " textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

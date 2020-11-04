@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T10:59:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MostMoveble" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="749edb66-9e49-4608-9748-8e3f3679c172">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString language="SQL">
+		<![CDATA[SELECT ord.storeId,s.type, COUNT(ord.orderId) FROM orderDetails ord,store s WHERE ord.storeId=s.storeId
+GROUP BY storeId ORDER BY 3 DESC]]>
+	</queryString>
+	<field name="storeId" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="COUNT(ord.orderId)" class="java.lang.Long"/>
+	<group name="storeId">
+		<groupExpression><![CDATA[$F{storeId}]]></groupExpression>
+	</group>
+	<group name="type">
+		<groupExpression><![CDATA[$F{type}]]></groupExpression>
+	</group>
+	<group name="COUNT(ord.orderId)">
+		<groupExpression><![CDATA[$F{COUNT(ord.orderId)}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="-6" width="190" height="30" uuid="57530911-b7c1-4cca-835a-65c54db54c1f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Harrington" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="29" width="160" height="30" uuid="624b74b6-f7cd-41f2-86d7-ecb61b88f0dc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="64" width="232" height="20" uuid="59c995ad-21d9-48b4-8005-9219e9289cb5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[MOST  MOVABLE  ITEM  LIST]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="92" width="552" height="1" forecolor="#BABABA" uuid="4ed0b8dc-b884-4f61-9481-9944f35687bb"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="410" y="36" width="88" height="16" uuid="f1c30af6-7521-40b4-9175-69b24bdfd4c9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="487" y="36" width="53" height="16" uuid="1243dd04-6c42-4dad-b759-65ea18ddb6d4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="35" y="0" width="116" height="20" uuid="615e3a24-ec94-4aaf-aa43-aac9e95e7571"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="140" height="20" uuid="d0b12a2c-a006-47ab-a049-0d322795aecd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="0" width="116" height="20" uuid="65dd6f68-0209-4075-bbe6-ebce373a2dda"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="22" width="552" height="1" forecolor="#BABABA" uuid="12d10bcc-833a-4b60-96d0-79a4963bea83"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="68" y="5" width="95" height="24" uuid="6e6b1720-e0e3-47b5-bb5a-e363ed31839f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{storeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="-4" width="160" height="24" uuid="bfeb2788-5127-4a20-9309-f26a1e7580ab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="2" width="100" height="24" uuid="a3660317-f40c-4adc-ad2f-57c7e199d653"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COUNT(ord.orderId)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="19" width="100" height="20" uuid="b63dcee2-5fb5-4161-abd5-b9e08b249eac"/>
+				<textElement>
+					<font fontName="Harrington" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Software by SP]]></text>
+			</staticText>
+			<line>
+				<reportElement x="4" y="3" width="552" height="1" forecolor="#BABABA" uuid="9a83df21-d00b-42e4-bb15-ae20cc1341cc"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

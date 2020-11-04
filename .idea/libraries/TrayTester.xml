@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="TrayTester">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lk/abayafarm/pos/lib/TrayTester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lk/abayafarm/pos/lib/protobuf-java-3.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

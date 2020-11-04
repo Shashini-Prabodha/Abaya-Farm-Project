@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T11:49:40 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyIncome" pageWidth="505" pageHeight="752" columnWidth="465" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6581178c-72ac-40b7-905c-44786d37178b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+<!--	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AbayaFarm Data Adapter "/>-->
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[  
+SELECT o.orderId,o.custId,c.custName,i.total,i.date from orders o ,customer c INNER JOIN income i WHERE 
+o.orderId=i.orderId and c.custId=o.custId and i.date=CURRENT_DATE]]>
+	</queryString>
+	<field name="orderId" class="java.lang.String"/>
+	<field name="custId" class="java.lang.String"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="date" class="java.sql.Date"/>
+	<field name="custName" class="java.lang.String"/>
+	<group name="orderId">
+		<groupExpression><![CDATA[$F{orderId}]]></groupExpression>
+	</group>
+	<group name="custId">
+		<groupExpression><![CDATA[$F{custId}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<group name="date">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="1" width="190" height="30" uuid="65d76361-9244-433e-a974-beef8f264e60"/>
+				<textElement>
+					<font fontName="Harrington" size="25" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Abaya Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="40" width="160" height="30" uuid="8c359083-c012-4440-b4c5-9123736f99ff"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[327/1, Ambagahawaththa, Kanaththagoda, Kamburugamuwa
+TEL : 041-2222173]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="115" width="460" height="1" forecolor="#C7C7C7" backcolor="#E3E3E3" uuid="916dff48-c3f0-4959-93e4-25bb484b401a"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="124" y="88" width="185" height="20" uuid="02f18d77-e3fb-4eff-b2d8-2b6f99d6429f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[DAILY INCOME REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="0" width="78" height="24" uuid="f1704ac0-b7c6-4e55-bee4-0fc2381915d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="78" height="24" uuid="af42d9a5-f72c-467c-881d-204dceb211a7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="0" width="78" height="24" uuid="e08d0681-842f-4aca-8012-fa853c5d5f19"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="78" height="24" uuid="135b875c-345a-48e5-9305-d6a648df3bd3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="0" width="113" height="30" uuid="6f1139a3-9ea7-42a0-a683-78e2630cb215"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="460" height="1" forecolor="#C2BEBE" uuid="91f2a61b-c7a5-4b8e-9775-1f218310a710"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="0" width="65" height="24" uuid="7c0e189f-68af-43a3-988e-364897e30387"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="65" height="24" uuid="1ab943d4-58fa-462c-b1e8-fb4d6350ee60"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="-1" width="65" height="24" uuid="21a2ee57-c8a4-4974-a8d9-d93251318121"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="65" height="24" uuid="71304b75-3549-428c-9797-0ba93e5a873e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="1" width="100" height="16" uuid="d774f4d3-d59c-4e63-a128-5748a0416427"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="5" width="460" height="1" forecolor="#BABABA" uuid="c91fa88f-60c9-4fc4-99af-b92256f89b2e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="204" y="14" width="66" height="26" uuid="0dc2eae1-ae43-4db5-bb7c-4cf8f62b19d9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="270" y="14" width="80" height="26" uuid="d9d0bc56-23bf-48fd-9920-cc12dcbe154d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

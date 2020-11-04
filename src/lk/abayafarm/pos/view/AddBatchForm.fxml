@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="866.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.abayafarm.pos.controller.AddBatchFormController">
+   <children>
+      <Label layoutX="59.0" layoutY="126.0" opacity="0.41" prefHeight="619.0" prefWidth="1390.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <JFXDatePicker id="date" fx:id="clndrDate" layoutX="859.0" layoutY="18.0" prefHeight="56.0" prefWidth="335.0">
+         <defaultColor>
+            <RadialGradient centerX="0.5056818181818182" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#efff0f" />
+                  <Stop color="#efff0f" offset="0.007246376811594203" />
+                  <Stop color="#3c0a6b" offset="0.9963768115942029" />
+                  <Stop color="#3c0a6b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </defaultColor>
+      </JFXDatePicker>
+      <Label layoutX="766.0" layoutY="18.0" prefHeight="43.0" prefWidth="111.0" text="Date ">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="43.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="18.0" text="Order ID" textFill="#171717">
+         <font>
+            <Font name="Victorian LET Plain:1.0" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderID" layoutX="203.0" layoutY="21.0" prefHeight="61.0" prefWidth="208.0" textFill="#1700c6">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="49.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="318.0" text="ChickenType">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSuplierId" alignment="CENTER" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="901.0" layoutY="202.0" prefHeight="54.0" prefWidth="161.0" promptText="Supplier ID" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBatchID" editable="false" focusColor="#0032bc" labelFloat="true" layoutX="1156.0" layoutY="201.0" prefHeight="54.0" prefWidth="233.0" promptText="Batch ID" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtChickPrice" focusColor="#ff2525" labelFloat="true" layoutX="98.0" layoutY="437.0" prefHeight="54.0" prefWidth="369.0" promptText="Chick Price" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="RED" labelFloat="true" layoutX="577.0" layoutY="438.0" onKeyReleased="#qtyKeyOnAction" prefHeight="54.0" prefWidth="208.0" promptText="Qty On Hand" unFocusColor="#720000">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="Description" focusColor="#d30020" labelFloat="true" layoutX="99.0" layoutY="574.0" prefHeight="88.0" prefWidth="700.0" promptText="Description">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </JFXTextArea>
+      <HBox alignment="CENTER_LEFT" layoutX="400.0" layoutY="306.0" prefHeight="59.0" prefWidth="144.0" spacing="70.0">
+         <children>
+            <JFXRadioButton fx:id="rbtnChick" lineSpacing="50.0" selected="true" text="chick">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+               <font>
+                  <Font name="Times New Roman Italic" size="33.0" />
+               </font>
+            </JFXRadioButton>
+         </children>
+      </HBox>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="605.0" layoutY="793.0" onAction="#btnAddOnAction" prefHeight="66.0" prefWidth="294.0" style="-fx-background-color: #f3a683; -fx-background-radius: 50;" text="Add">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+         <ripplerFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#21e8ff" />
+                  <Stop color="#27ff32" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </ripplerFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="908.0" layoutY="449.0" prefHeight="58.0" prefWidth="335.0" text="Maximum no of hens :">
+         <font>
+            <Font name="Times New Roman" size="34.0" />
+         </font>
+      </Label>
+      <Pane fx:id="logoPane" layoutX="1318.0" layoutY="-4.0">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/chick_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="66.0" fitWidth="80.0" layoutX="97.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/add_100px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="908.0" layoutY="325.0" prefHeight="58.0" prefWidth="251.0" text="Available Cage :">
+         <font>
+            <Font name="Times New Roman" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMaxHens" layoutX="1227.0" layoutY="434.0" prefHeight="94.0" prefWidth="187.0" textFill="#00058d">
+         <font>
+            <Font name="Times New Roman Bold" size="43.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCage" focusColor="#ee0000" layoutX="1154.0" layoutY="320.0" onAction="#cmbCageOnAction" onMouseClicked="#onMouseClicked" prefHeight="59.0" prefWidth="187.0" stylesheets="@style/Combo.css" />
+      <JFXButton fx:id="btnAddCage" buttonType="RAISED" layoutX="1367.0" layoutY="324.0" onAction="#btnAddCageOnActon" prefHeight="73.0" prefWidth="73.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/plusicon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="918.0" layoutY="556.0" opacity="0.41" prefHeight="125.0" prefWidth="447.0" style="-fx-border-color: #747d8c; -fx-border-radius: 20; -fx-border-width: 2;" text=" " />
+      <Label layoutX="952.0" layoutY="591.0" prefHeight="54.0" prefWidth="136.0" text="Total" textFill="#ae0000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="1083.0" layoutY="575.0" prefHeight="78.0" prefWidth="256.0" textFill="#ae0000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSupplierName" labelFloat="true" layoutX="103.0" layoutY="188.0" onAction="#cmbSupplierNameOnAction" prefHeight="66.0" prefWidth="686.0" promptText="Supplier Name" stylesheets="@style/Combo.css" />
+   </children>
+</AnchorPane>
