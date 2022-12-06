@@ -1,7 +1,10 @@
 <div align="center">
 
 # Abaya Farm 🐔
-![image](https://drive.google.com/uc?export=view&id=1KMSZpch9c2NmenxKFWRjhIQsKQ4uOZ9V)
+<h3  align="center">The main objective of this project is to provide services to
+facilitate Abaya farm management activities (feed management,
+egg management, Report generate, order management ,etc.). This
+is a desktop application.</h3>
 </div>
 
 
